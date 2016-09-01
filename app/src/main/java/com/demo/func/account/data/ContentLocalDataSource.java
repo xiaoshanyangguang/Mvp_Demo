@@ -44,6 +44,7 @@ public class ContentLocalDataSource implements ContentDataSource {
                             L.e("gankDailyBean".toString());
                             subscriber.onNext(gankDailyBean);
                         }else{
+                            Reservoir.delete("GankDailyBean");
                             subscriber.onCompleted();
                         }
                     } catch (Exception e) {

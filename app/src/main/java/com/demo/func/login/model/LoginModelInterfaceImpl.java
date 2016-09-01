@@ -3,6 +3,7 @@ package com.demo.func.login.model;
 import android.text.TextUtils;
 
 import com.demo.common.model.BaseModel;
+import com.demo.common.presenter.BasePresenter;
 import com.demo.common.util.UIUtils;
 
 import javax.inject.Inject;
@@ -52,7 +53,7 @@ public class LoginModelInterfaceImpl extends BaseModel implements LoginModelInte
     }
 
     @Override
-    public Observable getObservable(int recode) {
+    public Observable getObservable(int recode, BasePresenter.RequestMode mode) {
         return null;
     }
 

@@ -2,6 +2,7 @@ package com.demo.func.home.model;
 
 import com.demo.common.dagger.scope.PerActivity;
 import com.demo.common.model.BaseModel;
+import com.demo.common.presenter.BasePresenter;
 import com.demo.func.home.common.EasyDate;
 import com.demo.func.home.model.forum.MainApi;
 
@@ -28,7 +29,7 @@ public class MainModel extends BaseModel implements MainModelInter {
     }
 
     @Override
-    public Observable getObservable(int recode) {
+    public Observable getObservable(int recode, BasePresenter.RequestMode mode) {
         if(recode<0){
             throw new IllegalArgumentException("api接口的recode不能小于0");
         }

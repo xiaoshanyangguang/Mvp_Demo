@@ -1,6 +1,7 @@
 package com.demo.func.home.model;
 
 import com.demo.common.model.BaseModel;
+import com.demo.common.presenter.BasePresenter;
 
 import javax.inject.Inject;
 
@@ -17,7 +18,7 @@ public class NavigationModelInterfaceInter extends BaseModel {
     public NavigationModelInterfaceInter(){}
 
     @Override
-    public Observable getObservable(int recode) {
+    public Observable getObservable(int recode, BasePresenter.RequestMode mode) {
         return null;
     }
 }
