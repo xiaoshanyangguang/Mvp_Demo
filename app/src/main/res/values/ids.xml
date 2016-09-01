@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="title_text">false</item>
+    <item type="id" name="title_right_btn">false</item>
+    <item type="id" name="title_left_btn">false</item>
+    <item type="id" name="title_bg_rl">false</item>
+    <item type="id" name="toolbar">false</item>
+    <item type="id" name="et_name">false</item>
+    <item type="id" name="et_password">false</item>
+    <item type="id" name="btn_login">false</item>
+    <item type="id" name="recycleview">false</item>
+    <item type="id" name="xrecycleview">false</item>
+    <item type="id" name="cardview">false</item>
+    <item type="id" name="linearlayout">false</item>
+    <item type="id" name="framelayout">false</item>
+    <item type="id" name="relayout">false</item>
+    <item type="id" name="fragment">false</item>
+    <item type="id" name="tabhost">false</item>
+    <item type="id" name="realtabcontent">false</item>
+    <item type="id" name="textview">false</item>
+    <item type="id" name="pagerSlidingTabStrip">false</item>
+    <item type="id" name="viewPager">false</item>
+
+</resources>

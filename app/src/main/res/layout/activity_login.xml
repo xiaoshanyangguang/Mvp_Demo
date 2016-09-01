@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".func.login.ui.LoginActivity">
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/app_loging_usename"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/app_loging_password"/>
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darker_blue"
+        android:text="@string/app_loging"
+        android:textSize="@dimen/space_27"
+        android:layout_margin="@dimen/space_27"/>
+</LinearLayout>

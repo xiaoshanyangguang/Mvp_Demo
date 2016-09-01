@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".func.home.ui.MainActivity">
+    <LinearLayout
+        android:id="@id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@id/realtabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:background="@color/line_background"/>
+            <com.demo.func.home.widget.MyFragmentTabHost
+                android:id="@id/tabhost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <fragment
+        android:id="@id/fragment"
+        android:layout_width="@dimen/space_800"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:name="com.demo.func.home.ui.NavigationFragment"
+        tools:layout="@layout/fragment_navigation_drawer"></fragment>
+</android.support.v4.widget.DrawerLayout>

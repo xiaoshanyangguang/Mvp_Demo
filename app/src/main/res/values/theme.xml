@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppBaseTheme_Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/foreground_material_dark</item>
+        <item name="layout_item_bg">@drawable/day_list_item_background</item>
+        <item name="lineColor">@color/day_line_color</item>
+        <item name="layout_bg_normal">@color/day_layout_bg_normal</item>
+    </style>
+    <!-- 日间模式
+    <style name="AppBaseTheme_Light" parent="@style/Theme.AppCompat.Light">
+        <item name="layout_item_bg">@drawable/day_list_item_background</item>
+    </style>> 日间模式 -->
+    <!-- 夜间模式 -->
+
+    <!-- Base application theme. -->
+    <style name="AppBaseTheme_Night" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/foreground_material_dark</item>
+        <item name="layout_item_bg">@drawable/day_list_item_background</item>
+        <item name="layout_bg_normal">@color/night_layout_bg_normal</item>
+    </style>
+    <!--<style name="AppBaseTheme_Night" parent="@style/Theme.AppCompat">-->
+        <!---->
+    <!--</style>>-->
+</resources>
