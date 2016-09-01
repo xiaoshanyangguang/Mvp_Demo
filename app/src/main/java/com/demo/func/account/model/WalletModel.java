@@ -5,6 +5,7 @@ import com.demo.common.bean.GankDailyBean;
 import com.demo.common.bean.GankDataBean;
 import com.demo.common.dagger.scope.PerFragment;
 import com.demo.common.model.BaseModel;
+import com.demo.common.presenter.BasePresenter;
 import com.demo.common.util.L;
 import com.demo.func.account.data.ContentLocalDataSource;
 import com.demo.func.home.common.EasyDate;
@@ -34,7 +35,7 @@ public class WalletModel extends BaseModel {
     }
 
     @Override
-    public Observable getObservable(int recode) {
+    public Observable getObservable(int recode, BasePresenter.RequestMode mode) {
         L.e("getObservable"+recode);
         if(recode<0){
             throw new IllegalArgumentException("api接口的recode不能小于0");
@@ -64,9 +65,13 @@ public class WalletModel extends BaseModel {
 //                if(i==0){
 //                    return dailyDataByNetworkWithlocalUpdate;
 //                }
-                ContentLocalDataSource data= new ContentLocalDataSource();
-                Observable<List<GankDailyBean>> gankDailyBeanByLocal = data.getLocalGank("GankDailyBean");
-                return Observable.concat(gankDailyBeanByLocal,dailyDataByNetworkWithlocalUpdate).first();
+                if(mode== BasePresenter.RequestMode.FRIST){
+                    ContentLocalDataSource data= new ContentLocalDataSource();
+                    Observable<List<GankDailyBean>> gankDailyBeanByLocal = data.getLocalGank("GankDailyBean");
+                    Observable.concat(gankDailyBeanByLocal,dailyDataByNetworkWithlocalUpdate).first();
+
+                }
+                return dailyDataByNetworkWithlocalUpdate;
             case 1:
                 return (Observable<GankDataBean>) mMainApi.getGankData();
         }

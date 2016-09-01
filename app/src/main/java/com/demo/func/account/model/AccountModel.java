@@ -2,6 +2,7 @@ package com.demo.func.account.model;
 
 import com.demo.common.dagger.scope.PerFragment;
 import com.demo.common.model.BaseModel;
+import com.demo.common.presenter.BasePresenter;
 
 import javax.inject.Inject;
 
@@ -18,7 +19,7 @@ public class AccountModel extends BaseModel {
     public AccountModel(){
     }
     @Override
-    public Observable getObservable(int recode) {
+    public Observable getObservable(int recode, BasePresenter.RequestMode mode) {
         return null;
     }
 }

@@ -13,6 +13,9 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import rx.Subscriber;
+import rx.Subscription;
+
 /**
  * @创建者 piper
  * @创建时间 2016/8/23 12:56
@@ -20,7 +23,8 @@ import javax.inject.Inject;
  */
 @PerFragment
 public class WalletPresenter extends BasePresenter<WalletContract.WalletView,WalletModel> implements WalletContract.WalletPresenter {
-
+    private     Subscriber   mSubscriber;
+    private Subscription mSubscription;
     @Inject
     public WalletPresenter(WalletModel baseModel) {
         super(baseModel);
@@ -58,6 +62,8 @@ public class WalletPresenter extends BasePresenter<WalletContract.WalletView,Wal
         }
 //        mUiView.loadingComplete(o,recode);
     }
+
+
 
     @Override
     public void onFailed(Object e, int recode) {
