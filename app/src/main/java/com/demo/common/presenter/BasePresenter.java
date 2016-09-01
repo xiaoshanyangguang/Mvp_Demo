@@ -31,7 +31,7 @@ public abstract class BasePresenter<V extends BaseView,M extends BaseModel> {
     private boolean                  isCancell =false;
     private HashMap<Integer,Boolean> recodeMap = new HashMap<Integer,Boolean>();
     protected RequestMode mode = RequestMode.FRIST;
-    private CompositeSubscription mSubscriptions;
+    private CompositeSubscription mSubscriptions ;
 
 
     public BasePresenter(M baseModel){

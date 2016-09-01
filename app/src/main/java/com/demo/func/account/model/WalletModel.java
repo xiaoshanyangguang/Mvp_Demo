@@ -68,7 +68,7 @@ public class WalletModel extends BaseModel {
                 if(mode== BasePresenter.RequestMode.FRIST){
                     ContentLocalDataSource data= new ContentLocalDataSource();
                     Observable<List<GankDailyBean>> gankDailyBeanByLocal = data.getLocalGank("GankDailyBean");
-                    Observable.concat(gankDailyBeanByLocal,dailyDataByNetworkWithlocalUpdate).first();
+                    return Observable.concat(gankDailyBeanByLocal,dailyDataByNetworkWithlocalUpdate).first();
 
                 }
                 return dailyDataByNetworkWithlocalUpdate;
