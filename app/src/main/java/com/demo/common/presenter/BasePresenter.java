@@ -63,10 +63,12 @@ public abstract class BasePresenter<V extends BaseView,M extends BaseModel> {
         this.mode = mode;
         for(int recode=0;recode<recodes.length;recode++){
             mSubscriber = getSubscriber(recode,mode);
-            mSubscription = mBaseModel.getObservable(recode).compose(RxUtils.applyIOToMainThreadSchedulers())
+            mSubscription = mBaseModel.getObservable(recode,mode).compose(RxUtils.applyIOToMainThreadSchedulers())
                     .subscribe(mSubscriber);
         }
     }
+
+
 
     protected Subscriber getSubscriber(final int recode,RequestMode mode){
         return new Subscriber() {

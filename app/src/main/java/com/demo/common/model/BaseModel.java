@@ -1,5 +1,7 @@
 package com.demo.common.model;
 
+import com.demo.common.presenter.BasePresenter;
+
 import rx.Observable;
 
 /**
@@ -11,7 +13,7 @@ public abstract class BaseModel implements BaseModelInterface {
 
 
 
-    public abstract Observable getObservable(int recode);
+    public abstract Observable getObservable(int recode, BasePresenter.RequestMode mode);
 
 
 
